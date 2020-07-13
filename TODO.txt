@@ -1,0 +1,11 @@
+Stuff that should probably be done to make repository better/more informative:
+
+- Add ideas/tools for setting up a ROS2 dev enviorment 
+    -. Link an IDE with good ROS2 integration
+    
+    -. Add tools for making working with ROS2 less painful
+    (IN PROGRESS)
+    
+    -. link tutorials explaining how the topic, node, publisher system works.
+    
+    -. explain how .py launch files work
