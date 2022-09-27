@@ -2,6 +2,13 @@ This file is for making installing ROS2 on Ubuntu easier. Theres a turtlebot3 de
 
 If you're dual booting into Ubuntu, skip the VM steps, open 3 terminals through Activites -> Terminal, and skip straight to TERMINAL 1
 
+Requirements:
+	Linux or Windows computer(You will need to find your own virtualization software if you use MAC)
+	
+	VirtualBox
+	
+	40GB-100GB
+
 
 Install the Ubuntu 20.04 iso here
 	https://releases.ubuntu.com/focal/ubuntu-20.04.5-desktop-amd64.iso
@@ -15,7 +22,7 @@ VM parameters:
 	
 	- Fixed Size
 	
-	- 40-100 GtheB
+	- 40-100 GB
 	
 
 then, click on your vm and go into settings:
