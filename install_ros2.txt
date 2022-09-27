@@ -4,7 +4,7 @@ If you're dual booting into Ubuntu, skip the VM steps, open 3 terminals through 
 
 
 Install the Ubuntu 20.04 iso here
-	https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64
+	https://releases.ubuntu.com/focal/ubuntu-20.04.5-desktop-amd64.iso
 	
 VM parameters:
 	- 8192 MB ram
