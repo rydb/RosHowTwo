@@ -1,6 +1,6 @@
-This is a git repository for storing ROS2 documentation on how to do various things and to link to various resources with tutorials, examples etc... Think the awesome list but for ROS2. As of writing this, ROS2 documentation is currently heavily scattered across forums with only a small portion of it being on the wiki.
+This is a git repository for storing ROS2 documentation on how to do various things and to link to various resources with tutorials, examples etc... Think the awesome list but for ROS2, and with more of a "how to" focus.
 
- On that note, if you have links to a set of resources or a particularly good tutorial, make an issue and we'll look into adding it.
+On that note, if you have links to a set of resources or a particularly good tutorial, make an issue and we'll look into adding it.
  
 There aren't any standardized books or tutorials to learn ROS2, so the best way to learn it is through observation of demos, asking the ROS awnsers community for help when you get stuck, and testing it out your self!
 
