@@ -1,0 +1,117 @@
+This file is for making installing ROS2 on Ubuntu easier. Theres a turtlebot3 demo at the end to make sure everything is up and running.
+
+If you're dual booting into Ubuntu, skip the VM steps, open 3 terminals through Activites -> Terminal, and skip straight to TERMINAL 1
+
+
+Install the Ubuntu 20.04 iso here
+	https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64
+	
+VM parameters:
+	- 8192 MB ram
+	
+	- Create virtual hard disk now
+	
+	- VDI
+	
+	- Fixed Size
+	
+	- 40-100 GtheB
+	
+
+then, click on your vm and go into settings:
+	go to system:
+		- Set processors to 4
+	go to storage
+		- click  disk and click add.
+		
+		- add the ubuntu 20.04 iso that you installed
+		
+	go to general
+		- click advanced
+		
+		- set shared clip board to "Host to Geust"
+
+
+Then start the virtual machine and we'll go through the installation
+
+
+	- normal installation
+	- INSTALL THIRD PARTY SOFTWARE FOR GRAPHICS AND WIFI HARDWARE. 
+	YOU WILL NOT HAVE YOUR NVIDIA GRAPHICS DRIVERS(if you use a nvidia GPU)
+	IF YOU DONT
+	
+	- erase disk and install ubuntu
+	
+Then, run ubuntu, and once on the desktop screen click on devices(press right ctrl + c to get
+back to scaled mode so you can see it if you can't), and click "insert geust additions cd"
+	- say yes to everything, and then restart ubuntu
+	
+Once back on desktop for ubuntu:
+	- go to view, select virtual screen, set resolution to your screen size.
+	
+	- then click activites, type "terminal", right click add to favorites, and then create 3 windows. Execute the following in each window by copying n' pasting the code blocks below
+	
+	
+
+
+TERMINAL 1:
+
+
+sudo apt-get update -y ; \
+sudo apt-get upgrade -y ; \
+sudo apt-get install build-essential -y ; \
+sudo apt update && sudo apt install locales -y ; \
+sudo apt install software-properties-common -y ; \
+sudo apt install curl gnupg2 lsb-release -y ; \
+sudo apt-get install git -y ; \ 
+sudo apt-get install python3-pip -y ; \
+pip3 install -U colcon-common-extensions ; \
+pip3 install pytest_rerunfailures ; \
+sudo snap install --classic code ; \
+sudo locale-gen en_US en_US.UTF-8 ; \
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 ; \
+export LANG=en_US.UTF-8 ; \
+locale  # verify settings ; \
+sudo add-apt-repository universe -y ; \
+apt-cache policy | grep universe ; \
+sudo add-apt-repository universe -y ; \
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg ; \
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(source /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null ; \
+sudo apt install ros-foxy-desktop -y --allow-unauthenticated ; \
+sudo apt install ros-foxy-gazebo-ros-pkgs -y ; \
+sudo apt install ros-foxy-turtlebot3-msgs ros-foxy-dynamixel-sdk ros-foxy-hls-lfcd-lds-driver -y ; \
+sudo apt-get install ros-foxy-teleop-twist-keyboard -y ; \
+sudo apt-get install ros-foxy-cartographer-ros -y ; \
+mkdir -p ~/turtlebot3_ws/src && cd ~/turtlebot3_ws/src ; \
+git clone -b foxy-devel https://github.com/ROBOTIS-GIT/turtlebot3/ ; \
+git clone -b foxy-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations ; \
+cd ~/turtlebot3_ws ; \
+colcon build --symlink-install --parallel-workers 1 ; \
+echo 'export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/turtlebot3_ws/src/turtlebot3_simulations/turtlebot3_gazebo/models' >> ~/.bashrc ; \
+source ~/.bashrc ; \
+source /opt/ros/foxy/setup.bash ; \
+export TURTLEBOT3_MODEL=burger ; \
+source install/setup.sh ; \
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+
+
+TERMINAL 2:
+
+cd ~/turtlebot3_ws ; \
+source install/setup.sh ; \
+source /opt/ros/foxy/setup.bash ; \
+export TURTLEBOT3_MODEL=burger ; \
+ros2 run turtlebot3_teleop teleop_keyboard
+
+
+TERMINAL 3:
+
+cd ~/turtlebot3_ws ; \
+source install/setup.sh ; \
+source /opt/ros/foxy/setup.bash ; \
+export TURTLEBOT3_MODEL=burger ; \
+ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True
+
+
+
+
