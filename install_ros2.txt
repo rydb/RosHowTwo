@@ -59,7 +59,11 @@ Once back on desktop for ubuntu:
 	- then click activites, type "terminal", right click add to favorites, and then create 3 windows. Execute the following in each window by copying n' pasting the code blocks below
 	
 	
-
+TERMINAL 1(IF USING VIRTUABOX AND CLIPBOARD ISN'T WORKING):
+sudo apt update \
+sudo apt install build-essential dkms linux-headers-$(uname -r) \
+sudo apt install virtualbox-guest-x11 \
+sudo VBoxClient --clipboard
 
 TERMINAL 1:
 
