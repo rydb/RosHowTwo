@@ -56,6 +56,11 @@ back to scaled mode so you can see it if you can't), and click "insert geust add
 Once back on desktop for ubuntu:
 	- go to view, select virtual screen, set resolution to your screen size.
 	
+	(IF USING VIRTUALBOX)
+	- press right-ctrl + c to exit scaled mode, click devices in top bar, and click "insert geust additions cd image" select yes to everything that 
+	pops up
+	(CONTINUE)
+		
 	- then click activites, type "terminal", right click add to favorites, and then create 3 windows. Execute the following in each window by copying n' pasting the code blocks below
 	
 	
