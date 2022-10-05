@@ -9,6 +9,7 @@ Requirements:
 	
 	40GB-100GB
 
+	64 bit OS
 
 Install the Ubuntu 20.04 iso that matches your chipset, pick the one here if you your chipset is AMD64(most modern pcs and laptops have this)
 	https://releases.ubuntu.com/focal/ubuntu-20.04.5-desktop-amd64.iso
