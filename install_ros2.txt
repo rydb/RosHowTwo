@@ -66,9 +66,9 @@ Once back on desktop for ubuntu:
 	
 	
 TERMINAL 1(IF USING VIRTUABOX AND CLIPBOARD ISN'T WORKING):
-sudo apt update \
-sudo apt install build-essential dkms linux-headers-$(uname -r) \
-sudo apt install virtualbox-guest-x11 \
+sudo apt update ; \
+sudo apt install build-essential dkms linux-headers-$(uname -r) ; \
+sudo apt install virtualbox-guest-x11 ; \
 sudo VBoxClient --clipboard
 
 TERMINAL 1:
