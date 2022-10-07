@@ -63,7 +63,8 @@ Once back on desktop for ubuntu:
 	(CONTINUE)
 		
 	- then click activites, type "terminal", right click add to favorites, and then create 3 windows. Execute the following in each window by copying n' pasting the code blocks below
-	
+
+Now, reopen this page inside firefox in the virtual machine and copy and paste the following commands:
 	
 TERMINAL 1(IF USING VIRTUABOX AND CLIPBOARD ISN'T WORKING):
 sudo apt update ; \
