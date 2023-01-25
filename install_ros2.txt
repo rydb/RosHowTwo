@@ -28,7 +28,7 @@ VM parameters:
 
 then, click on your vm and go into settings:
 	go to system:
-		- Set processors to 4
+		- Set processors to half of the ammount of cores you have. Or if you only have 2, set this ammount to 2.
 	go to storage
 		- click  disk and click add.
 		
