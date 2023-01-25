@@ -1,6 +1,6 @@
 This file is for making installing ROS2 on Ubuntu easier. Theres a turtlebot3 demo at the end to make sure everything is up and running.
 
-If you're dual booting into Ubuntu, skip the VM steps, open 3 terminals through Activites -> Terminal, and skip straight to TERMINAL 1
+If you're dual booting into Ubuntu, skip the VM(Virtual Machine) steps, open 3 terminals through Activites -> Terminal, and skip straight to TERMINAL 1
 
 Requirements:
 	Linux or Windows computer(You will need to find your own virtualization software if you use MAC)
